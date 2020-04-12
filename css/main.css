@@ -165,9 +165,10 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 80%;
+    top: 85%;
     z-index: 99;
     display: none;
+    width: 100%;
   }
 }
 
@@ -185,6 +186,11 @@ header {
 .search-input::placeholder {
   color: #fff;
   text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .search-input {
+    width: 100%;
+  }
 }
 
 .search-button {

@@ -43,9 +43,10 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 80%;
+        top: 85%;
         z-index: 99;
         display: none;
+        width: 100%;
     }
 }
 
@@ -63,6 +64,10 @@ header {
     &::placeholder {
         color: #fff;
         text-transform: capitalize;
+    }
+
+    @include xs {
+        width: 100%;
     }
 }
 
