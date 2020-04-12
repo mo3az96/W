@@ -17,4 +17,21 @@ $(document).ready(function () {
             }
         });
     }
+    /////////Main Slider/////////
+    $('.latest-img').owlCarousel({
+        margin: 30,
+        rtl: document.dir == 'rtl' ? true : false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            500: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
+            },
+        }
+    });
 });

@@ -43,15 +43,12 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 85%;
+        top: 90%;
         z-index: 99;
         display: none;
         width: 262px;
+        margin: 0;
         text-align: center;
-    }
-
-    @include xs {
-        width: 100%;
     }
 }
 
@@ -71,19 +68,13 @@ header {
         text-transform: capitalize;
 
     }
-
-
-
-    @include xs {
-        width: 100%;
-    }
 }
 
 .search-button {
     position: absolute;
     left: 20px;
     background-color: transparent;
-    top: 16px;
+    top: 11px;
 
     path {
         @include transition(all 0.3s ease-in-out);
