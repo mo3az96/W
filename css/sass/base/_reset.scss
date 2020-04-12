@@ -2,6 +2,7 @@ body {
     position: relative;
     font-family: dis-reg;
     background-color: $back;
+    height: 1000px;
 
     &::-webkit-scrollbar {
         background-color: $fff;

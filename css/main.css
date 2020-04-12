@@ -25,6 +25,7 @@ body {
   position: relative;
   font-family: dis-reg;
   background-color: #F7F9FC;
+  height: 1000px;
 }
 body::-webkit-scrollbar {
   background-color: #FFFFFF;
@@ -226,11 +227,10 @@ header {
 }
 
 /* start main */
-main {
+.home {
   position: relative;
   background-image: url(../images/main.jpg);
-  background-attachment: fixed;
-  background-position: center top;
+  background-position-x: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -240,11 +240,13 @@ main {
   text-align: center;
 }
 @media (max-width: 992px) {
-  main {
+  .home {
     padding: 50px 0;
+    background-attachment: fixed;
+    background-position: center top;
   }
 }
-main::before {
+.home::before {
   background-color: rgba(34, 43, 69, 0.85);
   position: absolute;
   top: 0;
@@ -253,10 +255,10 @@ main::before {
   height: 100%;
   content: "";
 }
-main .main-info {
+.home .main-info {
   position: relative;
 }
-main .main-subhead {
+.home .main-subhead {
   font-size: 20px;
   color: #FFFFFF;
   letter-spacing: 1.28px;
@@ -264,11 +266,11 @@ main .main-subhead {
   margin-bottom: 15px;
 }
 @media (max-width: 992px) {
-  main .main-subhead {
+  .home .main-subhead {
     font-size: 18px;
   }
 }
-main .main-head {
+.home .main-head {
   font-size: 35px;
   color: #FF9100;
   letter-spacing: 1.23px;
@@ -277,12 +279,12 @@ main .main-head {
   margin-bottom: 55px;
 }
 @media (max-width: 992px) {
-  main .main-head {
+  .home .main-head {
     font-size: 25px;
     margin-bottom: 30px;
   }
 }
-main .find {
+.home .find {
   width: 165px;
   height: 40px;
   border-radius: 20px;
@@ -299,7 +301,7 @@ main .find {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-main .find:hover {
+.home .find:hover {
   background-color: #ff9100;
 }
 
@@ -339,7 +341,7 @@ main .find:hover {
     justify-content: space-between;
   }
 }
-.nav-tabs li {
+.nav-tabs li .tab-link {
   padding: 0 20px;
   height: 40px;
   border-radius: 40px;
@@ -352,21 +354,6 @@ main .find:hover {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-@media (max-width: 767px) {
-  .nav-tabs li {
-    padding: 0 15px;
-    margin: 0;
-  }
-}
-.nav-tabs li .tab-link {
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-  outline: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
   font-size: 18px;
   font-family: text-reg;
   color: #FF9100;
@@ -375,38 +362,20 @@ main .find:hover {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 767px) {
+  .nav-tabs li .tab-link {
+    padding: 0 15px;
+    margin: 0;
+  }
+}
 .nav-tabs li .tab-link:hover {
-  border: none;
-  box-shadow: none;
-  outline: none;
-  background-color: transparent;
   color: #222B45;
 }
-.nav-tabs li .tab-link:focus {
-  border: none;
-  box-shadow: none;
-  outline: none;
-  background-color: transparent;
-  color: #222B45;
-}
-.nav-tabs li.active {
+.nav-tabs li .tab-link.active {
   background-color: #FF9100;
   pointer-events: none;
-}
-.nav-tabs li.active .tab-link {
   color: #FFFFFF;
   border: none;
-  background-color: transparent;
-}
-.nav-tabs li.active .tab-link:focus {
-  color: #FFFFFF;
-  border: none;
-  background-color: transparent;
-}
-.nav-tabs li.active .tab-link:hover {
-  color: #FFFFFF;
-  border: none;
-  background-color: transparent;
 }
 
 .tab-content {
@@ -539,7 +508,7 @@ main .find:hover {
     margin-left: -7.5px;
     margin-right: -7.5px;
   }
-  .cats-sec .col-xs-6 {
+  .cats-sec .col-6 {
     padding: 0 7.5px !important;
   }
 }
@@ -601,6 +570,121 @@ main .find:hover {
 }
 
 /* end cats sec*/
+.page {
+  background-image: url(../images/page-head.jpg);
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 215px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page::before {
+  background-color: rgba(34, 43, 69, 0.72);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+@media (max-width: 992px) {
+  .page {
+    height: 150px;
+    background-position: center top;
+  }
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+@media (max-width: 767px) {
+  .page-head {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.page-head .sec-head {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .page-head .sec-head {
+    margin-bottom: 20px;
+  }
+}
+
+.filters {
+  width: 261px;
+  height: 48px;
+  border: 1px solid #FF9100;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #222B45;
+  padding: 0 20px;
+  background-color: #F7F9FC;
+  /* Appearance: none will hide the default arrow */
+  appearance: none;
+  /* Best to include the browser prefix for cross-browser compatibility */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.filters:after {
+  content: url(../images/Polygon.svg);
+}
+
+.select {
+  position: relative;
+}
+.select::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 10px solid #222B45;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.pepole-page .person {
+  margin-bottom: 45px;
+}
+@media (max-width: 767px) {
+  .pepole-page .person {
+    margin-bottom: 15px;
+  }
+}
+.pepole-page .more {
+  margin-top: 30px;
+}
+
+.cat-page::before {
+  background-color: transparent;
+  background: linear-gradient(120deg, rgba(255, 145, 0, 0) 0%, #ff9100 100%);
+}
+.cat-page:after {
+  background: linear-gradient(120deg, #ff9100 0%, #ffc400 100%);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+}
+
 /* start footer*/
 footer {
   margin-top: 75px;

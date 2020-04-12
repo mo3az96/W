@@ -1,0 +1,103 @@
+.page {
+    background-image: url(../images/page-head.jpg);
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        background-color: rgba($text, 0.72);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+    }
+
+    @include sm {
+        height: 150px;
+        background-position: center top;
+    }
+}
+
+.page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 75px;
+    margin-bottom: 75px;
+
+    @include xs {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sec-head {
+        margin: 0;
+
+        @include xs {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.filters {
+    width: 261px;
+    height: 48px;
+    border: 1px solid $orange;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: $text;
+    padding: 0 20px;
+    background-color: $back;
+
+    &:after {
+        content: url(../images/Polygon.svg);
+    }
+
+    /* Appearance: none will hide the default arrow */
+    appearance: none;
+    /* Best to include the browser prefix for cross-browser compatibility */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 10px solid $text;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+    }
+}
+
+.pepole-page {
+    .person {
+        margin-bottom: 45px;
+
+        @include xs {
+            margin-bottom: 15px;
+        }
+    }
+
+    .more {
+        margin-top: 30px;
+    }
+}
