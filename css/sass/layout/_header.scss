@@ -46,6 +46,11 @@ header {
         top: 85%;
         z-index: 99;
         display: none;
+        width: 262px;
+        text-align: center;
+    }
+
+    @include xs {
         width: 100%;
     }
 }
@@ -64,7 +69,10 @@ header {
     &::placeholder {
         color: #fff;
         text-transform: capitalize;
+
     }
+
+
 
     @include xs {
         width: 100%;

@@ -168,6 +168,12 @@ header {
     top: 85%;
     z-index: 99;
     display: none;
+    width: 262px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .search-cont {
     width: 100%;
   }
 }
