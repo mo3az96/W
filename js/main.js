@@ -1,5 +1,6 @@
 $(window).on("load", function () { });
 $(document).ready(function () {
+    new WOW().init();
     if ($(window).width() <= 991) {
         ////////////////////
         $('.serch-ico').click(function () {

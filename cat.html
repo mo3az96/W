@@ -8,6 +8,7 @@
     <link rel='shortcut icon' type='img/png' href='images/fav.png' />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -16,8 +17,10 @@
     <header>
         <div class="container">
             <div class="header">
-                <a href="index.html" class="logo"><img src="images/logo.png" class="img-fluid"></a>
-                <div class="right-head">
+                <a href="index.html" class="logo wow zoomIn">
+                    <img src="images/logo.png" class="img-fluid">
+                </a>
+                <div class="right-head wow fadeInDown" data-wow-delay="0.2s">
                     <ul class="mo-nav fixall list-unstyled">
                         <li class="nav-li"><a href="#!" class="nav-anchor fixall">Categories</a></li>
                         <li class="nav-li"><a href="#!" class="nav-anchor fixall">Contact us</a></li>
@@ -196,7 +199,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-12">
+                <div class="col-md-3 col-12 wow fadeInLeft">
                     <div class="first-div">
                         <div class="logo"><img src="images/logo.png" class="img-fluid"></div>
                         <div class="social">
@@ -240,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-6">
+                <div class="col-md-2 col-6 wow fadeInLeft" data-wow-delay="0.2s">
                     <ul class="fixall list-unstyled foot-links">
                         <li class="foot-li">
                             <a href="#!" class="foot-link fixall">Categories</a>
@@ -253,7 +256,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-6">
+                <div class="col-md-2 col-6 wow fadeInLeft" data-wow-delay="0.4s">
                     <ul class="fixall list-unstyled forms-links">
                         <li class="foot-li">
                             <a href="#!" class="foot-link fixall">Sign in</a>
@@ -263,7 +266,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 offset-lg-1 col-md-5 offset-md-0 col-12">
+                <div class="col-lg-4 offset-lg-1 col-md-5 offset-md-0 col-12 wow fadeInLeft" data-wow-delay="0.6s">
                     <span class="form-title">Join our mailing list</span>
                     <form class="join-cont">
                         <input type="email" class="join-input fixall" placeholder="Email">
@@ -280,6 +283,7 @@
 
     <script src="js/jquery-2.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
