@@ -174,13 +174,10 @@
 
     .owl-dots {
         margin-top: 25px;
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
 
-        @include sm {
-            display: flex;
-        }
 
         .owl-dot {
             background: rgba(#000, 0.55);
