@@ -31,6 +31,10 @@ body {
   background-color: #F7F9FC;
 }
 
+html[dir=rtl] body {
+  font-family: reg;
+}
+
 body::-webkit-scrollbar {
   background-color: #FFFFFF;
   width: 7px;
@@ -85,6 +89,26 @@ html {
   src: url("../fonts/SF/SFProDisplay-Bold.ttf");
 }
 
+@font-face {
+  font-family: "reg";
+  src: url("../fonts/almiria/Almarai-Regular.ttf");
+}
+
+@font-face {
+  font-family: "light";
+  src: url("../fonts/almiria/Almarai-Light.ttf");
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/almiria/Almarai-Bold.ttf");
+}
+
+@font-face {
+  font-family: "exbold";
+  src: url("../fonts/almiria/Almarai-ExtraBold.ttf");
+}
+
 /* start navbar */
 .mo-nav {
   display: flex;
@@ -128,6 +152,10 @@ html[dir=rtl] .nav-li {
   margin-top: 2px;
 }
 
+html[dir=rtl] .nav-anchor::after {
+  transform: translateX(5px);
+}
+
 .nav-anchor:hover {
   color: #FF9100;
 }
@@ -136,6 +164,10 @@ html[dir=rtl] .nav-li {
   transform: none;
   opacity: 1;
   visibility: visible;
+}
+
+html[dir=rtl] .nav-anchor:hover::after {
+  transform: none;
 }
 
 /* start navbar */
@@ -215,10 +247,12 @@ html[dir=rtl] .search-cont {
   padding-right: 10px;
 }
 
+
 html[dir=rtl] .search-input {
   padding-left: 10px;
   padding-right: 53px;
   text-align: right;
+  font-family: light;
 }
 
 .search-input::placeholder {
@@ -319,6 +353,11 @@ html[dir=rtl] .search-button {
   margin-bottom: 55px;
 }
 
+html[dir=rtl] .home .main-head {
+  letter-spacing: unset;
+  font-family: exbold;
+}
+
 @media (max-width: 992px) {
   .home .main-head {
     font-size: 25px;
@@ -355,6 +394,10 @@ html[dir=rtl] .search-button {
   font-size: 35px;
   text-align: center;
   margin-bottom: 75px;
+}
+
+html[dir=rtl] .sec-head {
+  font-family: bold;
 }
 
 @media (max-width: 992px) {
@@ -408,6 +451,10 @@ html[dir=rtl] .search-button {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+html[dir=rtl] .nav-tabs li .tab-link {
+  font-family: reg;
 }
 
 @media (max-width: 767px) {
@@ -520,6 +567,10 @@ html[dir=rtl] .person .person-info {
   font-family: text-med;
 }
 
+html[dir=rtl] .person .person-name {
+  font-family: bold;
+}
+
 .person .person-name:hover {
   color: #FF9100;
 }
@@ -535,6 +586,10 @@ html[dir=rtl] .person .person-info {
 .person .line span {
   font-size: 16px;
   font-family: text-reg;
+}
+
+html[dir=rtl] .person .line span {
+  font-family: reg;
 }
 
 .person .line span.job {
@@ -651,6 +706,10 @@ html[dir=rtl] .person .person-info {
   z-index: 999;
   letter-spacing: -0.01px;
   font-family: text-reg;
+}
+
+html[dir=rtl] .cat span {
+  font-family: reg;
 }
 
 @media (max-width: 992px) {
@@ -861,6 +920,10 @@ html[dir=rtl] .select::after {
   font-family: text-med;
 }
 
+html[dir=rtl] .person-big-name .person-job {
+  font-family: bold;
+}
+
 .rate {
   text-align: center;
 }
@@ -872,6 +935,10 @@ html[dir=rtl] .select::after {
   text-align: center;
   margin-top: 2px;
   display: block;
+}
+
+html[dir=rtl] .rate .reviews {
+  font-family: reg;
 }
 
 .person-about {
@@ -889,7 +956,15 @@ html[dir=rtl] .select::after {
   font-size: 16px;
   color: #8F9BB3;
   font-family: text-reg;
-  text-align: justify;
+  margin-bottom: 15px;
+}
+
+html[dir=rtl] .person-about-head {
+  font-family: reg;
+}
+
+html[dir=rtl] .person-about-text {
+  font-family: reg;
 }
 
 .last-div {
@@ -917,6 +992,10 @@ html[dir=rtl] .select::after {
   transition: all 0.3s ease-in-out;
 }
 
+html[dir=rtl] .book {
+  font-family: bold;
+}
+
 .book:hover {
   color: #fff;
   background-color: #FF9100;
@@ -937,6 +1016,14 @@ html[dir=rtl] .select::after {
   font-size: 16px;
   color: #FF9100;
   font-family: text-reg;
+}
+
+html[dir=rtl] .person-time-head {
+  font-family: bold;
+}
+
+html[dir=rtl] .person-time-text {
+  font-family: bold;
 }
 
 .person-cats {
@@ -970,7 +1057,20 @@ html[dir=rtl] .select::after {
   font-family: dis-light;
 }
 
+html[dir=rtl] .person-cats .tag {
+  font-family: light;
+}
+
+html[dir=rtl] .person-cats .tag {
+  margin-right: 0;
+  margin-left: 6px;
+}
+
 .person-cats .tag:last-of-type {
+  margin: 0;
+}
+
+html[dir=rtl] .person-cats .tag:last-of-type {
   margin: 0;
 }
 
@@ -979,6 +1079,10 @@ html[dir=rtl] .select::after {
   color: #222B45;
   font-family: text-reg;
   margin-bottom: 25px;
+}
+
+html[dir=rtl] .person-cats-head {
+  font-family: reg;
 }
 
 @media (max-width: 767px) {
@@ -1001,6 +1105,10 @@ html[dir=rtl] .select::after {
   font-size: 30px;
   color: #222B45;
   font-family: text-med;
+}
+
+html[dir=rtl] .latest-haed {
+  font-family: bold;
 }
 
 @media (max-width: 992px) {
@@ -1083,6 +1191,10 @@ html[dir=rtl] .select::after {
   margin-bottom: 20px;
 }
 
+html[dir=rtl] .label-head {
+  font-family: reg;
+}
+
 .label-head.pay-hed {
   margin-top: 50px;
 }
@@ -1133,6 +1245,10 @@ html[dir=rtl] .custom-check {
   font-size: 20px;
   color: #222B45;
   font-family: text-reg;
+}
+
+html[dir=rtl] .custom-check .label {
+  font-family: reg;
 }
 
 .custom-check input {
@@ -1254,6 +1370,10 @@ html[dir=rtl] .line .form-input:last-of-type {
   transition: all 0.3s ease-in-out;
 }
 
+html[dir=rtl] .form-input {
+  font-family: reg;
+}
+
 .form-input::placeholder {
   color: rgba(143, 155, 179, 0.5);
 }
@@ -1292,6 +1412,10 @@ html[dir=rtl] .line .form-input:last-of-type {
   transition: all 0.3s ease-in-out;
 }
 
+html[dir=rtl] .form-area {
+  font-family: reg;
+}
+
 .form-area::placeholder {
   color: rgba(143, 155, 179, 0.5);
 }
@@ -1313,6 +1437,10 @@ html[dir=rtl] .line .form-input:last-of-type {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin-top: 60px;
+}
+
+html[dir=rtl] .submit {
+  font-family: bold;
 }
 
 .submit:hover {
@@ -1356,6 +1484,18 @@ html[dir=rtl] .line .form-input:last-of-type {
   text-align: center;
   margin-top: 70px;
   color: #222B45;
+}
+
+html[dir=rtl] .how-head {
+  font-family: reg;
+}
+
+html[dir=rtl] .how-texy {
+  font-family: reg;
+}
+
+html[dir=rtl] .forms-head {
+  font-family: reg;
 }
 
 @media (max-width: 767px) {
@@ -1467,6 +1607,14 @@ html[dir=rtl] .line .form-input:last-of-type {
   margin-top: 15px;
 }
 
+html[dir=rtl] .form-title {
+  font-family: bold;
+}
+
+html[dir=rtl] .form-subhead {
+  font-family: reg;
+}
+
 .check {
   display: flex;
   align-items: center;
@@ -1480,6 +1628,11 @@ html[dir=rtl] .line .form-input:last-of-type {
   width: 18px;
   height: 18px;
   margin-right: 10px;
+}
+
+html[dir=rtl] .check input {
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 .forget-cont {
@@ -1507,10 +1660,20 @@ html[dir=rtl] .line .form-input:last-of-type {
   border-right: 1px solid #979797;
 }
 
+html[dir=rtl] .enroll-form {
+  border-right: none;
+  border-left: 1px solid #979797;
+}
+
 @media (max-width: 767px) {
   .enroll-form {
     border: none;
     margin-bottom: 40px;
+  }
+
+  html[dir=rtl] .enroll-form {
+    border-right: none;
+    border-left: none;
   }
 }
 
@@ -1705,6 +1868,10 @@ html[dir=rtl] footer .join-button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+html[dir=rtl] .copyright {
+  font-family: light;
 }
 
 @media (max-width: 992px) {
