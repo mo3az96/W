@@ -61,14 +61,7 @@
     color: $text;
     padding: 0 20px;
     background-color: $back;
-
-    &:after {
-        content: url(../images/Polygon.svg);
-    }
-
-    /* Appearance: none will hide the default arrow */
     appearance: none;
-    /* Best to include the browser prefix for cross-browser compatibility */
     -webkit-appearance: none;
     -moz-appearance: none;
 }
