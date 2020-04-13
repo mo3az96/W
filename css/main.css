@@ -1111,6 +1111,151 @@ header {
   line-height: 40px;
 }
 
+.forms-head {
+  font-size: 34px;
+  font-family: text-reg;
+  text-align: center;
+  margin-top: 70px;
+  color: #222B45;
+}
+@media (max-width: 767px) {
+  .forms-head {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+}
+
+.forms {
+  margin-top: 60px;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .forms {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+}
+.forms .submit {
+  margin-top: 13px;
+  background-color: #FF9100;
+  border: 1px solid #FF9100;
+}
+.forms .submit:hover {
+  background-color: transparent;
+  color: #FF9100;
+}
+.forms > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .forms > div {
+    width: 100%;
+  }
+}
+.forms > div form {
+  width: 360px;
+}
+@media (max-width: 767px) {
+  .forms > div form {
+    width: 100%;
+  }
+}
+.forms > div form.enroll {
+  margin-top: 65px;
+}
+@media (max-width: 767px) {
+  .forms > div form.enroll {
+    margin-top: 25px;
+  }
+}
+.forms > div form.log {
+  margin-top: 33px;
+}
+@media (max-width: 767px) {
+  .forms > div form.log {
+    margin-top: 25px;
+  }
+}
+.forms .form-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.condition {
+  font-size: 15px;
+  color: #222B45;
+}
+.condition .cond-link {
+  font-size: 15px;
+  color: #FF9100;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.condition .cond-link:hover {
+  color: #8F9BB3;
+}
+
+.form-title {
+  font-family: dis-med;
+  font-size: 21px;
+  color: #222B45;
+}
+
+.form-subhead {
+  font-family: dis-reg;
+  font-size: 16px;
+  color: #222B45;
+  margin-top: 15px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 15px;
+  color: #222B45;
+  margin-bottom: 8px;
+}
+.check input {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.forget-cont {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 18px;
+}
+.forget-cont .forget {
+  font-size: 15px;
+  color: #222B45;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.forget-cont .forget:hover {
+  color: #FF9100;
+}
+
+.enroll-form {
+  border-right: 1px solid #979797;
+}
+@media (max-width: 767px) {
+  .enroll-form {
+    border: none;
+    margin-bottom: 40px;
+  }
+}
+
 /* start footer*/
 footer {
   margin-top: 75px;
