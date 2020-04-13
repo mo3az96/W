@@ -214,6 +214,7 @@
 
         @include sm {
             text-align: center;
+            margin-top: 0;
         }
     }
 
@@ -246,6 +247,11 @@
             &.num {
                 color: $orange;
             }
+        }
+
+        @include xs {
+            flex-direction: row;
+            margin-bottom: 0;
         }
     }
 }
