@@ -81,6 +81,10 @@ html {
 .nav-li {
   margin-right: 24px;
 }
+html[dir=rtl] .nav-li {
+  margin-right: 0;
+  margin-left: 24px;
+}
 
 .nav-anchor {
   color: #222B45;
@@ -160,6 +164,10 @@ header {
   position: relative;
   margin-left: 5px;
 }
+html[dir=rtl] .search-cont {
+  margin: 0;
+  margin-right: 5px;
+}
 @media (max-width: 992px) {
   .search-cont {
     position: absolute;
@@ -185,6 +193,11 @@ header {
   padding-left: 53px;
   padding-right: 10px;
 }
+html[dir=rtl] .search-input {
+  padding-left: 10px;
+  padding-right: 53px;
+  text-align: right;
+}
 .search-input::placeholder {
   color: #fff;
   text-transform: capitalize;
@@ -195,6 +208,10 @@ header {
   left: 20px;
   background-color: transparent;
   top: 11px;
+}
+html[dir=rtl] .search-button {
+  left: auto;
+  right: 20px;
 }
 .search-button path {
   -moz-transition: all 0.3s ease-in-out;
@@ -421,11 +438,21 @@ header {
   padding-right: 5px;
   padding-bottom: 10px;
   padding-top: 10px;
+  margin: 0;
+}
+html[dir=rtl] .person .person-info {
+  text-align: right;
+}
+html[dir=rtl] .person .person-info {
+  padding-left: 5px;
+  padding-right: 10px;
 }
 @media (max-width: 992px) {
   .person .person-info {
     text-align: center;
-    margin-top: 0;
+  }
+  html[dir=rtl] .person .person-info {
+    text-align: center;
   }
 }
 .person .person-name {
@@ -444,6 +471,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
   margin-top: 5px;
 }
 .person .line span {
@@ -648,6 +676,10 @@ header {
   border-top: 10px solid #222B45;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
+}
+html[dir=rtl] .select::after {
+  right: auto;
+  left: 20px;
 }
 
 .pepole-page .person {
@@ -1317,13 +1349,25 @@ footer .social {
 footer .social-link {
   margin-right: 9px;
 }
+html[dir=rtl] footer .social-link {
+  margin-right: 0;
+  margin-left: 9px;
+}
 @media (max-width: 992px) {
   footer .social-link {
     margin-right: 15px;
   }
+  html[dir=rtl] footer .social-link {
+    margin-left: 15px;
+    margin-right: 0;
+  }
 }
 footer .social-link:last-of-type {
   margin-right: 0;
+}
+html[dir=rtl] footer .social-link:last-of-type {
+  margin-right: 0;
+  margin-left: 0;
 }
 footer .social-link path {
   -moz-transition: all 0.3s ease-in-out;
@@ -1407,6 +1451,10 @@ footer .join-button {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+html[dir=rtl] footer .join-button {
+  right: auto;
+  left: 0;
 }
 
 .copyright {

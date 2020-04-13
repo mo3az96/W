@@ -78,6 +78,11 @@
         border-top: 10px solid $text;
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
+
+        #{$rtl} & {
+            right: auto;
+            left: 20px;
+        }
     }
 }
 

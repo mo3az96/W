@@ -38,12 +38,27 @@ footer {
     .social-link {
         margin-right: 9px;
 
+        #{$rtl} & {
+            margin-right: 0;
+            margin-left: 9px;
+        }
+
         @include sm {
             margin-right: 15px;
+
+            #{$rtl} & {
+                margin-left: 15px;
+                margin-right: 0;
+            }
         }
 
         &:last-of-type {
             margin-right: 0;
+
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: 0;
+            }
         }
 
         path {
@@ -136,6 +151,11 @@ footer {
         font-size: 15px;
         color: $fff;
         @include transition(all 0.3s ease-in-out);
+
+        #{$rtl} & {
+            right: auto;
+            left: 0;
+        }
     }
 
 }

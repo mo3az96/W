@@ -39,6 +39,11 @@ header {
     position: relative;
     margin-left: 5px;
 
+    #{$rtl} & {
+        margin: 0;
+        margin-right: 5px;
+    }
+
     @include sm {
         position: absolute;
         left: 50%;
@@ -63,6 +68,12 @@ header {
     padding-left: 53px;
     padding-right: 10px;
 
+    #{$rtl} & {
+        padding-left: 10px;
+        padding-right: 53px;
+        text-align: right;
+    }
+
     &::placeholder {
         color: #fff;
         text-transform: capitalize;
@@ -75,6 +86,11 @@ header {
     left: 20px;
     background-color: transparent;
     top: 11px;
+
+    #{$rtl} & {
+        left: auto;
+        right: 20px;
+    }
 
     path {
         @include transition(all 0.3s ease-in-out);

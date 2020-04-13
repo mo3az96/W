@@ -7,6 +7,10 @@
 .nav-li {
     margin-right: 24px;
 
+    #{$rtl} & {
+        margin-right: 0;
+        margin-left: 24px;
+    }
 }
 
 .nav-anchor {
